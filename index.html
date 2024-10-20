@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Luca Florist</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    header {
+    position: fixed; /* Posisi tetap untuk header */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white; /* Warna latar belakang header */
+    z-index: 1000; /* Memastikan header tetap di atas konten lain */
+    padding: 10px 0; /* Padding untuk estetika */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk kedalaman */
+}
+    section {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fafad2;
+    padding-top: 80px; /* Ruang untuk header tetap */
+}
+
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Untuk meratakan produk dalam baris */
+    }
+    .product-item {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: calc(20% - 20px); /* Mengatur lebar produk agar ada 5 produk dalam satu baris, dengan margin */
+        text-align: center;
+        margin: 10px 0; /* Margin vertikal untuk spasi antara baris */
+    }
+    .product-image {
+        width: 150px; /* Ukuran gambar produk lebih kecil */
+        height: auto;
+        border-radius: 10px;
+    }
+    .buy-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: pink; /* Warna latar belakang pink */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .buy-button:hover {
+        background-color: #ff69b4; /* Warna pink lebih gelap saat hover */
+    }
+</style>
+
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Luca Florist</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-button">About Us</a></li>
+                <li><a href="#products" class="nav-button">Our Products</a></li>
+                <li><a href="#contact" class="nav-button">Contact Us</a></li>
+                <!-- Tombol untuk menuju halaman keranjang -->
+                <li><a href="cart.html" class="cart-button">Keranjang</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section id="about">
+    <div class="about-banner">
+        <img src="bannerluca.png" alt="bannerluca">
+    </div>
+    <h2>About Us</h2>
+    <p>Welcome to Luca Florist! Hanya yang segar, hanya yang terbaik. Kami menawarkan bunga-bunga fresh yang dipilih langsung dari sumbernya, siap menyempurnakan setiap momen spesial dalam hidup Anda. Temukan keindahan yang selalu fresh di setiap kelopak!<br/>
+        🌷 Rangkai Kebahagiaan
+        Biarkan bunga-bunga kami menambah keceriaan dalam hidup Anda. Dari hadiah sederhana hingga momen spesial, kami siap memenuhi semua kebutuhan Anda.<br/>
+
+       💐 Pilih dengan Cinta
+       Setiap bunga kami dipilih dengan penuh perhatian, memberikan Anda pilihan terbaik untuk menyampaikan pesan dari hati.<br/>
+
+    ✨ Segera Hadir di Depan Pintu Anda
+Jelajahi koleksi kami dan nikmati pengantaran cepat, agar setiap momen spesial Anda selalu diwarnai oleh keindahan segar dari Luca Florist!</p>
+</section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-gallery">
+            <div class="product-item">
+                <img src="mawar.jpg" alt="Flower 1">
+                <h3>Mawar</h3>
+                <p>Rp30.000</p>
+                <button class="buy-button" onclick="addToCart('Mawar', 30000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="matahari.jpg" alt="Flower 2">
+                <h3>Matahari</h3>
+                <p>Rp35.000</p>
+                <button class="buy-button" onclick="addToCart('Matahari', 35000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="tulip.png" alt="Flower 3">
+                <h3>Tulip</h3>
+                <p>Rp40.000</p>
+                <button class="buy-button" onclick="addToCart('Tulip', 40000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="daisy.png" alt="Flower 4">
+                <h3>Daisy</h3>
+                <p>Rp20.000</p>
+                <button class="buy-button" onclick="addToCart('Daisy', 20000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="gerbera.png" alt="Flower 5">
+                <h3>Gerbera</h3>
+                <p>Rp30.000</p>
+                <button class="buy-button" onclick="addToCart('Gerbera', 35000)">Tambah ke Keranjang</button>
+            </div>
+             <div class="product-gallery">
+            <div class="product-item">
+                <img src="Lily.jpg" alt="Flower 6">
+                <h3>Lily</h3>
+                <p>Rp30.000,00</p>
+                <button class="buy-button" onclick="addToCart('Lily', 30000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="krisan.jpg" alt="Flower 7">
+                <h3>Krisan</h3>
+                <p>Rp30.000</p>
+                <button class="buy-button" onclick="addToCart('Krisan', 30000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="peony.jpg" alt="Flower 8">
+                <h3>Peony</h3>
+                <p>Rp40.000</p>
+                <button class="buy-button" onclick="addToCart('Peony', 40000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="hortensia.jpg" alt="Flower 9">
+                <h3>Hortensia</h3>
+                <p>Rp45.000</p>
+                <button class="buy-button" onclick="addToCart('Hortensia', 45000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="anyelir.jpg" alt="Flower 10">
+                <h3>Anyelir</h3>
+                <p>Rp30.000</p>
+                <button class="buy-button" onclick="addToCart('Anyelir', 30000)">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+   <script>
+    function addToCart(productName, price) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Buat ID produk yang unik (misalnya menggunakan nama produk)
+        const itemId = productName.replace(/\s+/g, '-').toLowerCase();
+
+        // Tambahkan produk ke dalam array cart
+        cart.push({ id: itemId, name: productName, price: price });
+
+        // Simpan cart yang diperbarui ke localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        alert(productName + ' telah ditambahkan ke keranjang!');
+    }
+</script>
+
+
+   <section id="contact">
+    <h2>Contact Us</h2>
+    
+    <form action="#">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-options">
+        <h3>Contact via WhatsApp</h3>
+        <p>Klik tombol ini untuk menghubungkan ke WhatsApp!</p>
+        <a href="https://wa.me/6285926848844" target="_blank" class="whatsapp-button">WhatsApp Us</a>
+    </div>
+
+    <div class="location">
+        <h3>Our Location</h3>
+        <p>Kamu bisa melihat lokasi toko kami di:</p>
+        <p>Fasilkom Universitas Sriwijaya, Bukit</p>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31875.22209601651!2d104.7308028!3d-2.9856014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3b75ed9f44e9c5%3A0x30db735107f3611d!2sFasilkom%20Universitas%20Sriwijaya%20-%20Kampus%20Palembang!5e0!3m2!1sid!2sid!4v1727603257802!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <script>
+    document.querySelectorAll('.nav-button').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah navigasi default
+            const sectionId = this.getAttribute('href');
+            document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' }); // Menggulung halus ke bagian terkait
+        });
+    });
+</script>
+    </div>
+</section>
+</body>
+</html>

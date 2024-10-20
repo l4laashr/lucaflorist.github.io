@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Garamond, sans-serif;
+    line-height: 1.6;
+    
+}
+
+header {
+    background: #ff99cc;
+    padding: 20px;
+    text-align: center;
+    color: rosybrown;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rosybrown;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 10px 25px; /* Menambahkan padding untuk lonjong */
+    background-color: #FFC0CB;
+    color: white;
+    font-family: 'Verdana',serif;
+    text-decoration: none;
+    border-radius: 50px; /* Membuat tombol lonjong */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Tambahkan efek transisi */
+}
+
+.nav-button:hover {
+    background-color: #FA8072; /* Warna saat hover */
+    transform: scale(1.05); /* Efek membesar saat hover */
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+#about {
+    background: #f0f8ff;
+    font-family: 'Times New Roman', serif; /* Mengatur font khusus untuk About Us */
+}
+
+#products {
+    background: #e0ffff;
+}
+
+.product-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+\
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+#contact {
+    background: #fafad2;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff99cc;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff66b2;
+}
+
+
+footer {
+    background: #ff99cc;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#contact {
+    background: #fafad2;
+    padding-bottom: 50px;
+    font-family: 'Verdana', serif;
+}
+
+.contact-options {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.whatsapp-button:hover {
+    background-color: #1ebe54;
+}
+
+.location {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.location iframe {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+
+header .logo h1 {
+    color: rosybrown; /* Ganti dengan warna yang diinginkan, contoh: pink */
+    text-align: center; /* Memusatkan teks di header */
+    font-size: 2em; /* Ukuran font untuk header */
+}
+
+
+.cart-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: pink;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Bentuk lonjong */
+    font-family: 'Verdana',serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Tambahkan efek transisi */
+}
+
+.cart-button:hover {
+    background-color: salmon; /* Warna saat di-hover */
+    transform: scale(1.05); /* Efek membesar saat hover */
+
+}/* Gaya bagian keranjang */
+.cart-section {
+    padding: 20px;
+    max-width: 800px; /* Maksimal lebar section keranjang */
+    margin: auto; /* Pusatkan section */
+    background-color: #fff; /* Latar belakang putih untuk keranjang */
+    border-radius: 10px; /* Sudut melingkar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+}
+
+.cart-section h2 {
+    text-align: center; /* Pusatkan judul */
+    font-family: Palatino, serif; /* Gunakan font Palatino untuk judul */
+}
+
+/* Gaya item keranjang */
+.cart-item {
+    display: flex;
+    justify-content: space-between; /* Ruang antara elemen */
+    align-items: center; /* Vertikal center */
+    padding: 15px; /* Padding dalam item */
+    border-bottom: 1px solid #eee; /* Garis pemisah antar item */
+}
+
+.cart-item:last-child {
+    border-bottom: none; /* Hapus garis di bawah item terakhir */
+}
+
+.cart-item-details h3 {
+    margin: 0; /* Hapus margin untuk judul produk */
+}
+
+/* Gaya tombol hapus dan kembali */
+.delete-button,
+.back-button {
+    background-color: #ff4500; /* Warna tombol hapus */
+    color: white; /* Warna teks tombol */
+    border: none; /* Hapus border default */
+    padding: 10px 15px; /* Padding dalam tombol */
+    border-radius: 5px; /* Sudut melingkar pada tombol */
+    cursor: pointer; /* Tampilkan kursor pointer saat hover */
+    transition: background-color 0.3s; /* Efek transisi saat hover */
+}
+
+.delete-button:hover {
+    background-color: #ff6347; /* Warna saat hover tombol hapus */
+}
+
+.back-button {
+    background-color: #4caf50; /* Warna tombol kembali */
+    display: block; /* Tombol kembali sebagai blok */
+    width: 100%; /* Tombol mengambil lebar penuh */
+    margin-top: 20px; /* Spasi atas */
+}
+
+.back-button:hover {
+    background-color: #45a049; /* Warna saat hover tombol kembali */
+}
+
+
+/* Gaya bagian keranjang */
+.cart-section {
+    padding: 20px;
+    max-width: 800px; /* Maksimal lebar section keranjang */
+    margin: auto; /* Pusatkan section */
+    background-color: #fff; /* Latar belakang putih untuk keranjang */
+    border-radius: 10px; /* Sudut melingkar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    display: flex;
+    flex-direction: column; /* Mengatur item secara vertikal */
+    align-items: center; /* Memusatkan item secara horizontal */
+}
+
+.cart-section h2 {
+    text-align: center; /* Pusatkan judul */
+    font-family: Palatino, serif; /* Gunakan font Palatino untuk judul */
+}
+
+/* Gaya item keranjang */
+.cart-item {
+    display: flex;
+    justify-content: space-between; /* Ruang antara elemen */
+    align-items: center; /* Vertikal center */
+    padding: 15px; /* Padding dalam item */
+    border-bottom: 1px solid #eee; /* Garis pemisah antar item */
+}
+
+.cart-item:last-child {
+    border-bottom: none; /* Hapus garis di bawah item terakhir */
+}
+
+.cart-item-details h3 {
+    margin: 0; /* Hapus margin untuk judul produk */
+}
+
+/* Gaya tombol hapus dan kembali */
+.delete-button,
+.back-button {
+    background-color: #ff4500; /* Warna tombol hapus */
+    color: white; /* Warna teks tombol */
+    border: none; /* Hapus border default */
+    padding: 10px 15px; /* Padding dalam tombol */
+    border-radius: 5px; /* Sudut melingkar pada tombol */
+    cursor: pointer; /* Tampilkan kursor pointer saat hover */
+    transition: background-color 0.3s; /* Efek transisi saat hover */
+}
+
+.delete-button:hover {
+    background-color: #ff6347; /* Warna saat hover tombol hapus */
+}
+
+.back-button {
+    background-color: #4caf50; /* Warna tombol kembali */
+    display: block; /* Tombol kembali sebagai blok */
+    width: 100%; /* Tombol mengambil lebar penuh */
+    margin-top: 20px; /* Spasi atas */
+    padding: 10px 15px; /* Jarak dalam tombol */
+    border-radius: 25px; /* Bentuk lonjong */
+    width: 200px; /* Atur lebar tombol sesuai kebutuhan */
+    cursor: pointer; /* Kursor tangan saat hover */
+    font-size: 16px; /* Ukuran font */
+    margin-top: 5px; /* Jarak atas */
+}
+
+.back-button:hover {
+    background-color: #45a049; /* Warna saat hover tombol kembali */
+}
+
+.buy-button {
+    background-color: #FFC0CB; /* Warna hijau untuk tombol */
+    color: white; /* Teks putih */
+    border: none; /* Tanpa border */
+    padding: 10px 15px; /* Jarak dalam tombol */
+    border-radius: 25px; /* Bentuk lonjong */
+    width: 130px; /* Atur lebar tombol sesuai kebutuhan */
+    cursor: pointer; /* Kursor tangan saat hover */
+    font-size: 16px; /* Ukuran font */
+    margin-top: 5px; /* Jarak atas */
+
+}
+
+.buy-button:hover {
+    background-color: #FA8072; /* Warna lebih gelap saat hover */
+}
+
+
+
